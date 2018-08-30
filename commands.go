@@ -62,5 +62,6 @@ func ChuckNorris(s *discordgo.Session, m *discordgo.MessageCreate) {
 // Die kills the Bot.
 func Die(s *discordgo.Session, m *discordgo.MessageCreate) {
 	s.ChannelMessageSend(m.ChannelID, "PANIC! I'm DYING!")
+	s.Close()
 	panic("Dead.")
 }
